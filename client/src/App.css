@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url("images/pets-background.svg");
+  background-size: 100vw 100vh; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* header styles */
+header {
+  background-color: #28afb0;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  margin-left: 3vw;
+  color: #ffffff;
+  font-size: 50pt;
+  font-family: 'Work Sans', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img#logo {
+  height: 9vh;
+  margin-right: 3vw;
+}
+
+/* login & signup */
+section.signup {
+  float: right;
+  margin-right: 20vw;
+}
+
+section.login {
+  float: left;
+  margin-left: 20vw;
+}
+
+/* form styling */
+.container {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.container section {
+  border: .33vw solid #19647E;
+  border-radius: 5px;
+  background-color: #28afb0;
+  margin-top: 5vh;
+  width: 25vw;
+  max-width: 250px;
+  display: inline-block;
+  padding: 2vw;
+}
+
+input {
+  margin: .75vw;
+  padding: .25vw;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+}
+
+input:focus, input.login:hover, input.signup:hover {
+  border: 3px solid #F57D3D;
+  outline: none;
+}
+
+input.login, input.signup {
+  display: block;
+  margin: 3vh auto;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  color: #37392E;
+  font-weight: 700;
 }
