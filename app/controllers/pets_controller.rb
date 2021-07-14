@@ -10,11 +10,11 @@ class PetsController < ApplicationController
 
 
     #not tryna kill a pet sheesh
-    # def destroy
-    #     pet = @user.pets.find(params[:id])
-    #     pet.destroy
-    #     render json: pet
-    # end
+    def destroy
+        pet = @user.pets.find(params[:id])
+        pet.destroy
+        render json: pet
+    end
 
     private
 

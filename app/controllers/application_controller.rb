@@ -8,7 +8,7 @@ class ApplicationController < ActionController::API
 
   def auth_header
     # { Authorization: 'Bearer <token>' }
-    request.headers['Authorization']
+    request.headers['authorization']
   end
 
   def decoded_token

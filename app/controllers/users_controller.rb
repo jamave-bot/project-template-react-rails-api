@@ -29,7 +29,7 @@ class UsersController < ApplicationController
             wristband = encode_token({user_id: user.id})
             render json: {user: UserSerializer.new(user), token: wristband}
         else
-            render json: {error: "You done goofed"}
+            render json: {errors: "username or password is wrong!"}
         end
     end
 

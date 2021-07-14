@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   resources :appointments, only: [:create, :destroy]
-  resources :pets, only: [:create]
+  resources :pets, only: [:create, :destroy]
   resources :users, only: [:index,:create]
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
