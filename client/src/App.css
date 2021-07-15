@@ -2,11 +2,15 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background-image: url("images/pets-background.svg");
-  background-size: 100vw 100vh; 
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: 100%;
   background-position: center bottom;
 }
 
@@ -60,7 +64,7 @@ section.login {
   padding: 2vw;
 }
 
-input {
+input, select {
   margin: .75vw;
   padding: .25vw;
   border: 2px solid #ffffff;
@@ -80,4 +84,77 @@ input.login, input.signup {
   border-radius: 5px;
   color: #37392E;
   font-weight: 700;
+}
+
+/* household & appointment containers*/
+
+img#pet-img, img#service-img {
+  width: 75px;
+}
+
+article.wrapper {
+  width: 50vw;
+  color: #19647E;
+  margin: auto;
+  text-align: center;
+}
+
+section.wrapper {
+  background-color: #ffffff;
+  color: #37392E;
+  border: .33vw solid #19647E;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+div.pet-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  width: 75%;
+  font-size: 1.5vh;
+}
+
+button, input.button {
+  margin-top: 20px;
+  padding: 3px;
+  background-color:#ffffff;
+  border: 2px solid #28afb0;
+  border-radius: 5px;
+  color: #28afb0;
+  font-weight: 700;
+}
+
+button:hover, input.button:hover {
+  border: 2px solid #F57D3D;
+}
+
+button.delete {
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border: 2px solid #37392E;
+  color: #37392E;
+}
+
+button.delete:hover {
+  background-color: #28afb0;
+}
+
+/* new appointment & new pet forms */
+
+article#appointment-form, article#pet-form {
+  margin-top: 5vh;
+}
+
+section#appointment-section, section#pet-section {
+  background-color: #28afb0;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+form {
+  padding: 10px;
+  line-height: 4vh;
 }
