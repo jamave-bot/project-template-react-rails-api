@@ -2,9 +2,10 @@ class PetsController < ApplicationController
     # Any time that you make a Fetch Request involving a User AND you include the Authorization Headers, you need this line
         # You will have acces to `@user` variable from the token
     before_action :authorized, only: [:create, :destroy]
+    rescue_from ActiveRecord::RecordInvalid, with: :show_errors
 
     def create
-        pet = @user.pets.create(pet_params)
+        pet = @user.pets.create!(pet_params)
         render json: pet
     end
 
@@ -17,6 +18,10 @@ class PetsController < ApplicationController
     end
 
     private
+
+    def show_errors(invalid)
+        render json: {errors: invalid.record.errors.full_messages}
+    end
 
     def pet_params
         params.permit(:name, :age, :species, :user_id)
